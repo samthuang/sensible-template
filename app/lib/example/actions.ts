@@ -1,7 +1,6 @@
 'use server'
 
 import db from '@/app/lib/db'
-import { put } from '@vercel/blob'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'

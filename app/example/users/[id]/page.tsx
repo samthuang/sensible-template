@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
-import { fetchUser, fetchUserImageBlob } from '@/app/lib/example/data'
+import { fetchUser } from '@/app/lib/example/data'
 import UpdateUserForm from '@/app/ui/users/update-user-form'
-import { UpdateUserImageForm } from '@/app/ui/users/update-user-image-form'
 
 interface Props {
   params: Promise<{ id: string }>

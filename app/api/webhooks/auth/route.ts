@@ -28,7 +28,7 @@ export async function POST(request: NextRequestWithSvixRequiredHeaders) {
   // const body = request.body;
 
   // https://github.com/vercel/next.js/issues/49739#issuecomment-1553858264
-  // @ts-ignore
+  // @ts-expect-error NOTE(Sam): This is a workaround for the issue above
   const payload = await buffer(request.body)
   const headers = request.headers
 
@@ -44,7 +44,8 @@ export async function POST(request: NextRequestWithSvixRequiredHeaders) {
 
   try {
     event = webhook.verify(payload, svixHeaders) as Event
-  } catch (_) {
+  } catch (e: unknown) {
+    console.error(e)
     return NextResponse.json(
       { error: 'Invalid webhook signature' },
       { status: 400 }

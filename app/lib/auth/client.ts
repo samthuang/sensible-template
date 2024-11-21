@@ -12,7 +12,7 @@ export const useCurrentUser = () => {
 }
 
 export const AuthProvider = ({ user }: { user: CurrentUser | null }) => {
-  const [_value, setValue] = useAtom(currentUserAtom)
+  const [, setValue] = useAtom(currentUserAtom)
   useEffect(() => {
     setValue(user)
   }, [user, setValue])
