@@ -1,6 +1,9 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
-const isProtectedRoutes = createRouteMatcher(['/example/users(.*)'])
+const isProtectedRoutes = createRouteMatcher([
+  '/example/users(.*)',
+  '/example/ai(.*)',
+])
 const isWebhookRoutes = createRouteMatcher(['/api/webhooks(.*)'])
 
 // Sensible default: all routes are public by default (including API routes)

@@ -27,7 +27,7 @@ export default async function RootLayout({
   const user = await fetchCurrentUser()
 
   return (
-    <ClerkProvider dynamic>
+    <ClerkProvider dynamic afterSignOutUrl="/">
       <JotaiProvider>
         <AuthProvider user={user} />
         <html lang="en">
