@@ -12,8 +12,11 @@
     "seed": "tsx ./scripts/seed.ts"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^1.0.1",
     "@clerk/nextjs": "^6.4.0",
     "@prisma/client": "^5.22.0",
+    "@vercel/blob": "^0.26.0",
+    "ai": "^4.0.2",
     "jotai": "^2.10.3",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
@@ -23,8 +26,8 @@
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "chalk": "^5.3.0",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
@@ -35,5 +38,11 @@
     "tailwindcss": "^3.4.1",
     "tsx": "^4.19.2",
     "typescript": "^5"
+  },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
   }
 }
