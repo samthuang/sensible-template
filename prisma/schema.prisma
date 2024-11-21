@@ -8,10 +8,11 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-// Comment out the following model to use the default User model
-// model User {
-//   /// The user's ID is the same as the Clerk user ID
-//   /// The user is created with Clerk when they sign up
-//   /// The user is deleted with Clerk when they delete their account
-//   id String @id
-// }
+model User {
+  /// The user's ID is the same as the Clerk user ID
+  /// The user is created with Clerk when they sign up
+  /// The user is deleted with Clerk when they delete their account
+  id    String @id
+  email String @unique
+  name  String
+}
