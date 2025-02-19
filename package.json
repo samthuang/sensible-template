@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "prisma generate && prisma migrate dev && next dev",
+    "dev": "prisma generate && prisma migrate dev && next dev --turbopack",
     "build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,19 +18,19 @@
     "@vercel/blob": "^0.26.0",
     "ai": "^4.0.2",
     "jotai": "^2.10.3",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "next": "15.1.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "svix": "1.37.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
     "@types/node": "^20",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
     "chalk": "^5.3.0",
     "eslint": "^8",
-    "eslint-config-next": "15.0.3",
+    "eslint-config-next": "15.1.7",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
@@ -42,7 +42,7 @@
   "overrides": {
     "react": "$react",
     "react-dom": "$react-dom",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4"
   }
 }
